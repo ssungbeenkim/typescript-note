@@ -48,7 +48,7 @@
   function printMessage(message: string = 'default message') {
     console.log(message);
   }
-  printMessage();
+  printMessage(); // 아무것도 전달하지 않으면 기본값이 전달됨
 
   // Rest parameter
   function addNumbers(...numbers: number[]): number {
