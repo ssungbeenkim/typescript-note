@@ -1,5 +1,6 @@
 {
   // function: login -> success, fail ⏱
+  // 동일한 키를 가지고 있지만 state별로 다른 깂을 가지고 있도록 만들어야 한다.
   type SuccessState = {
     result: 'success';
     response: {
@@ -13,6 +14,7 @@
   type LoginState = SuccessState | FailState;
 
   function login(): LoginState {
+    //
     return {
       result: 'success',
       response: {
