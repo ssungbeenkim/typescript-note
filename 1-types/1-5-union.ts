@@ -41,5 +41,5 @@
     } else {
       console.log(`😭 ${state.reason}`);
     }
-  }
+  } // => discriminated
 }

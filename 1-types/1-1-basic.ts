@@ -52,10 +52,13 @@ null은 비어져 있음을 명확하게 명시하는 것.
 
   // never
   function throwError(message: string): never {
-    // 함수에서 절대 리턴하지 않는 경우를 명시
+    // 함수에서 절대 리턴하지 않는 경우를 명시하기 위해서 쓰인다. 
     // message -> server (log)
-    /* throw new Error(message); */
-    /* while (true) {} */
+    // throw new Error(message);
+    // while (true) {
+      // console.log('hshshsh');
+      // break;
+    }
   }
   let neverEnding: never; // 💩 // 이렇게 쓰지는 않는다.
 
