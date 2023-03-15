@@ -5,13 +5,14 @@
   };
 
   // public
-  // private
-  // protected
+  // private 외부에서 볼 수도 접근할 수도 없다.
+  // protected 상속을 할 때, 외부에서는 볼 수 없지만 자식 클래스에서는 볼 수 있게 함
   class CoffeeMaker {
     private static BEANS_GRAMM_PER_SHOT: number = 7; // class level
     private coffeeBeans: number = 0; // instance (object) level
 
     private constructor(coffeeBeans: number) {
+      // private 하므로써 makeMachine을 사용하도록 권장
       this.coffeeBeans = coffeeBeans;
     }
 
@@ -20,6 +21,7 @@
     }
 
     fillCoffeeBeans(beans: number) {
+      // public 함수들은 따로 public이라고 작성 안해주어도 된다.
       if (beans < 0) {
         throw new Error('value for beans should be greater than 0');
       }
