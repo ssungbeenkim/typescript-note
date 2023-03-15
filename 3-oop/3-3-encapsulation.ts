@@ -53,10 +53,12 @@
     }
     set age(num: number) {
       if (num < 0) {
+        // 전달된 값의 유효성 검사가 가능하다.
       }
       this.internalAge = num;
     }
     constructor(private firstName: string, public lastName: string) {}
+    // 생성자에 접근 제어자를 설정해 두면 바로 멤버변수로 설정이 된다.
   }
   const user = new User('Steve', 'Jobs');
   user.age = 6;
