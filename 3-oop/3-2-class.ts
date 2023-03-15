@@ -35,3 +35,4 @@
 
   const maker3 = CoffeeMaker.makeMachine(3);
 }
+// javascript에서 Math. 으로 쓰는 함수들은 모두 클래스 레벨 메서드이다.
