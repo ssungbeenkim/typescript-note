@@ -6,7 +6,7 @@
 
   // public
   // private 외부에서 볼 수도 접근할 수도 없다.
-  // protected 상속을 할 때, 외부에서는 볼 수 없지만 자식 클래스에서는 볼 수 있게 함
+  // protected 외부에서는 볼 수 없지만 상속을 할 때, 자식 클래스에서는 볼 수 있게 함
   class CoffeeMaker {
     private static BEANS_GRAMM_PER_SHOT: number = 7; // class level
     private coffeeBeans: number = 0; // instance (object) level
@@ -59,8 +59,9 @@
     }
     constructor(private firstName: string, public lastName: string) {}
     // 생성자에 접근 제어자를 설정해 두면 바로 멤버변수로 설정이 된다.
+    // firstName 을 외부에서 변경하려고 하면 read-only property 라고 안된다고 한다.
   }
-  const user = new User('Steve', 'Jobs');
+  const user = new User('Steve', Jobs);
   user.age = 6;
   console.log(user.fullName);
 }
