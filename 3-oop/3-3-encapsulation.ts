@@ -58,7 +58,7 @@
       this.internalAge = num;
     }
     constructor(private firstName: string, public lastName: string) {}
-    // 생성자에 접근 제어자를 설정해 두면 바로 멤버변수로 설정이 된다.
+    // 생성자에 접근 제어자를 설정하면 바로 멤버변수로 설정이 된다.
     // firstName 을 외부에서 변경하려고 하면 read-only property 라고 안된다고 한다.
   }
   const user = new User('Steve', 'Jobs');

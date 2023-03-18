@@ -128,7 +128,7 @@
     constructor(
       beans: number,
       private sugar: SugarSource,
-      private milk: MilkFrother,
+      private milk: MilkFrother
     ) {
       super(beans);
     }
