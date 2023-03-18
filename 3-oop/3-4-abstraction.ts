@@ -95,7 +95,7 @@
       console.log(coffee);
       this.machine.fillCoffeeBeans(45);
       this.machine.clean();
-    } // 인터페이스에서 지정한 함수들을 쓸 수 있다.
+    } // 인터페이스에서 지정한 함수들을 모두 쓸 수 있다.
   }
 
   const amature = new AmatureUser(maker);

@@ -13,6 +13,7 @@
     private coffeeBeans: number = 0; // instance (object) level
 
     constructor(coffeeBeans: number) {
+      // 상속을 하게 해 주려면 public 또는 protected로
       this.coffeeBeans = coffeeBeans;
     }
 
@@ -59,14 +60,15 @@
   }
 
   class CaffeLatteMachine extends CoffeeMachine {
-    constructor(beans: number, public readonly serialNumber: string) {
-      super(beans);
+    constructor(Coffeebeans: number, public readonly serialNumber: string) {
+      // readonly : 한번 설정되고 바뀌지 않는다면 설정해 준다.
+      super(Coffeebeans); // 부모의 생성자 호출
     }
     private steamMilk(): void {
       console.log('Steaming some milk... 🥛');
     }
     makeCoffee(shots: number): CoffeeCup {
-      const coffee = super.makeCoffee(shots);
+      const coffee = super.makeCoffee(shots); // 부모 클래스에서 함수 실행 후 return 값이 coffee에 저장된다.
       this.steamMilk();
       return {
         ...coffee,
