@@ -2,7 +2,7 @@
   type CoffeeCup = {
     shots: number;
     hasMilk?: boolean;
-    hasSugar?: boolean;
+    hasSugar?: boolean; //
   };
 
   interface CoffeeMaker {
@@ -85,7 +85,8 @@
       };
     }
   }
-
+  // 내부적으로 구현된 다양한 클래스들이 한가지 인터페이스로 구현되거나 동일한 부모 클래스를 상속했을 때
+  // 동일한 함수를 어떤 클래스인지 구분하지 않고 공통된 API를 호출할 수 있다는 것이 큰 장점이다.
   const machines: CoffeeMaker[] = [
     new CoffeeMachine(16),
     new CaffeLatteMachine(16, '1'),
@@ -94,7 +95,7 @@
     new CaffeLatteMachine(16, '1'),
     new SweetCoffeeMaker(16),
   ];
-  machines.forEach(machine => {
+  machines.forEach((machine) => {
     console.log('-------------------------');
     machine.makeCoffee(1);
   });
