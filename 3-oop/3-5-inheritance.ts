@@ -13,7 +13,7 @@
     private coffeeBeans: number = 0; // instance (object) level
 
     constructor(coffeeBeans: number) {
-      // 상속을 하게 해 주려면 public 또는 protected로
+      // 상속을 하게 해 주려면 public 또는 protected로. private이면 상속 불가.
       this.coffeeBeans = coffeeBeans;
     }
 
