@@ -39,9 +39,16 @@
       };
     }
   }
-
-  const maker = CoffeeMaker.makeMachine(32);
-  maker.fillCoffeeBeans(32);
+  // const maker = new CoffeeMaker(); Error
+  // Constructor of class 'CoffeeMaker' is private and only accessible within the class declaration.
+  // 아예 출력이 되지 않는다.
+  const maker1 = CoffeeMaker.makeMachine(7);
+  console.log(maker1);
+  //CoffeeMaker { coffeeBeans: 7 } private인데 왜 출력이 되는거지?
+  maker1.makeCoffee(1);
+  console.log(maker1);
+  maker1.fillCoffeeBeans(3);
+  console.log(maker1); //
 
   class User {
     get fullName(): string {

@@ -2,7 +2,7 @@
   // Array
   const fruits: string[] = ['🍅', '🍌'];
   const scroes: Array<number> = [1, 3, 4]; // refer generics
-  // const scroes: number[] = [1, 3, 4];
+  // const scores: number[] = [1, 3, 4];
   function printArray(fruits: readonly string[]) {
     //function printArray(fruits: readonly Array<number>) { 이렇게 작성하는 것은 아직 허용되지 않는다.
     // readonly 를 작성할 때 이렇게 해야한다.
