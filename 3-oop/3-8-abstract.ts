@@ -1,4 +1,6 @@
 {
+  // 상속과 관련된 조금 더 추상화를 활용할 수 잇는 문법
+
   type CoffeeCup = {
     shots: number;
     hasMilk?: boolean;
@@ -10,6 +12,7 @@
   }
 
   abstract class CoffeeMachine implements CoffeeMaker {
+    // abstract class는 instance를 만들 수 없다.
     private static BEANS_GRAMM_PER_SHOT: number = 7; // class level
     private coffeeBeans: number = 0; // instance (object) level
 
@@ -81,7 +84,7 @@
     new CaffeLatteMachine(16, '1'),
     new SweetCoffeeMaker(16),
   ];
-  machines.forEach(machine => {
+  machines.forEach((machine) => {
     console.log('-------------------------');
     machine.makeCoffee(1);
   });
