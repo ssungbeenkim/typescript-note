@@ -1,3 +1,6 @@
+/* 규격 정의.  
+스택을 변경하거나 다른 종류의 스택을 만들었을 때 사용자는 몰라도 됨. 
+인터페이스만 쓰고 있기 때문에 변경할 것이 없다. */
 interface Stack {
   readonly size: number;
   push(value: string): void;
@@ -41,9 +44,10 @@ const stack = new StackImpl(10);
 stack.push('Ellie 1');
 stack.push('Bob 2');
 stack.push('Steve 3');
+stack.push('Vincent 4');
 
-console.log(stack);
-console.dir(stack, { depth: 3 });
+// console.log(stack);
+console.dir(stack, { depth: null });
 // while (stack.size !== 0) {
 //   console.log(stack.pop());
 // }
