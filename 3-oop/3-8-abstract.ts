@@ -44,6 +44,9 @@
     }
 
     protected abstract extract(shots: number): CoffeeCup;
+    // abstract 로 자식 클래스마다 다르게 구현할 수 있게 만든다.
+    // 접근 제어자는 abstract 전에 와야한다.
+    // 구현사항은 적으면 안됨
 
     makeCoffee(shots: number): CoffeeCup {
       this.grindBeans(shots);
