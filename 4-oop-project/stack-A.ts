@@ -5,7 +5,7 @@ interface Stack {
   readonly size: number;
   push(value: string): void;
   pop(): string;
-}
+} // 두가지 기능이 있고, 사이즈라는 속성을 만들어 두었다.
 
 type StackNode = {
   readonly value: string;
@@ -14,7 +14,7 @@ type StackNode = {
 
 class StackImpl implements Stack {
   private _size: number = 0;
-  private head?: StackNode; //?
+  private head?: StackNode;
 
   constructor(private capacity: number) {}
   get size() {
@@ -30,7 +30,7 @@ class StackImpl implements Stack {
   }
   pop(): string {
     if (this.head == null) {
-      // 널체크를 했다. head는 null 일수도 undefined일 수도 있다. === undefined하면 오류 위험이 있음
+      // 널체크를 했다. 보통 head는 null 일수도 undefined일 수도 있다. === undefined하면 오류 위험이 있음. 여기서는 null일 수 없지만 보통 이렇게 널 체크를 한다.
       throw new Error('Stack is empty!');
     }
     const node = this.head;
@@ -46,10 +46,10 @@ stack.push('Bob 2');
 stack.push('Steve 3');
 stack.push('Vincent 4');
 
-// console.log(stack);
+console.log(stack);
 console.dir(stack, { depth: null });
-// while (stack.size !== 0) {
-//   console.log(stack.pop());
-// }
+while (stack.size !== 0) {
+  console.log(stack.pop());
+}
 
-// stack.pop();
+stack.pop();
