@@ -1,4 +1,10 @@
 {
+  /* 
+부모 클래스를 상속해서 자신에게 맞게 클래스를 다시 구현하므로써 다형성이라는 것을 만들어 볼 수 있다. 
+다형성 polimorphism이란 부모 클래스나 하나의 인터페이스를 상속한 자식 클래스가 인스턴스와 부모클래스에 있는 함수들을 다른 방식으로 
+다양하게 구성하므로써 다양성을 만들 수 있는 것을 말한다.
+ */
+
   type CoffeeCup = {
     shots: number;
     hasMilk?: boolean;
@@ -85,12 +91,8 @@
       };
     }
   }
-  // 내부적으로 구현된 다양한 클래스들이 한가지 인터페이스로 구현되거나 동일한 부모 클래스를 상속했을 때
-  // 동일한 함수를 어떤 클래스인지 구분하지 않고 공통된 API를 호출할 수 있다는 것이 큰 장점이다.
+
   const machines: CoffeeMaker[] = [
-    new CoffeeMachine(16),
-    new CaffeLatteMachine(16, '1'),
-    new SweetCoffeeMaker(16),
     new CoffeeMachine(16),
     new CaffeLatteMachine(16, '1'),
     new SweetCoffeeMaker(16),
@@ -99,4 +101,7 @@
     console.log('-------------------------');
     machine.makeCoffee(1);
   });
+  // 내부적으로 구현된 다양한 클래스들이 한가지 인터페이스로 구현되거나 동일한 부모 클래스를 상속했을 때
+  // 자식클래스의 내부 구현사항을 신경쓰지 않고 약속된 한가지의 api를 호출하므로써 사용하는 사람도 간편하게
+  // 다양한 기능들을 활용할 수 있게 도와준다.
 }

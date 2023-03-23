@@ -1,4 +1,9 @@
 {
+  /* 
+  상속에 대해 구현해보자. 
+  카페라떼 머신을 만들것이다. 
+
+   */
   type CoffeeCup = {
     shots: number;
     hasMilk: boolean;
@@ -79,7 +84,7 @@
 
   const machine = new CoffeeMachine(23);
   const latteMachine = new CaffeLatteMachine(23, 'SSSS');
-  const coffee = latteMachine.makeCoffee(1);
+  const coffee = latteMachine.makeCoffee(1); // 상속한 클래스의 함수를 모두 사용 가능
   console.log(coffee);
-  console.log(latteMachine.serialNumber);
+  // latteMachine.serialNumber =
 }

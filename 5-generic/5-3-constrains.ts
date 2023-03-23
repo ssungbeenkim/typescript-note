@@ -22,7 +22,18 @@ function payBad(employee: Employee): Employee {
   return employee;
 }
 
+// const ellie = new FullTimeEmployee();
+// const bob = new PartTimeEmployee();
+// ellie.workFullTime();
+// bob.workPartTime();
+
+// const ellieAfterPay = payBad(ellie);
+// const bobAfterPay = payBad(bob);
+// ellieAfterPay. -> interface에서 정의한 pay()밖에 사용할 수 없다. 세부 클래스의 정보를 잃어버리고  Employee가 된다.
+
 function pay<T extends Employee>(employee: T): T {
+  // implement 가 아니고 extend인 것은 문법임
+  //<Eplyee를 확장한 것만 가능>
   employee.pay();
   return employee;
 }
@@ -34,6 +45,7 @@ bob.workPartTime();
 
 const ellieAfterPay = pay(ellie);
 const bobAfterPay = pay(bob);
+// ellieAfterPay. // workFullTime() 사용이 가능하다.
 
 const obj = {
   name: 'ellie',
@@ -44,7 +56,7 @@ const obj2 = {
   animal: '🐕',
 };
 
-console.log(getValue(obj, 'name')); // ellie
+console.log(getValue(obj, 'name')); // ellie // 객체에 없는 키를 입력하면 에러가 발생한다.
 console.log(getValue(obj, 'age')); // 20
 console.log(getValue(obj2, 'animal')); // 🐕
 

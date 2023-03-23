@@ -5,7 +5,7 @@
       throw new Error('not valid number!');
     }
     return arg;
-  } // 타입별로 다 만들어야 하나?
+  } // 타입별로 다 만들 수는 없는 노릇이다.
 
   function checkNotNullAnyBad(arg: any | null): any {
     if (arg == null) {
@@ -23,5 +23,10 @@
     return arg;
   }
   const number = checkNotNull(123); // 이 시점에 number로 결정된다.
+  console.log(number);
+
   const boal: boolean = checkNotNull(true);
+  // boolean 명시해 주지 않으면 true타입이 되어버림. 모든 연산자가 타입이 될 수 있기 때문이다.
+
+  console.log(boal);
 }
