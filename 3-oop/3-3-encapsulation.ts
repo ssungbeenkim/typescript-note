@@ -4,9 +4,9 @@
     hasMilk: boolean;
   };
 
-  // public
-  // private 외부에서 볼 수도 접근할 수도 없다.
-  // protected 외부에서는 볼 수 없지만 상속을 할 때, 자식 클래스에서는 볼 수 있게 함
+  // public 외부에서 볼 수 있고 상속이나 인스턴스를 통해 내, 외부에서 볼 수 있음
+  // private 외부에서 볼 수도 접근할 수도 없다. 자식 클래스 내부에서조 볼 수 없음.
+  // protected 외부에서는 볼 수 없지만 상속을 할 때, 자식 클래스 내부에서는 볼 수 있게 함
   class CoffeeMaker {
     private static BEANS_GRAMM_PER_SHOT: number = 7; // class level
     private coffeeBeans: number = 0; // instance (object) level

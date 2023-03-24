@@ -1,5 +1,6 @@
 {
   // 상속과 관련된 조금 더 추상화를 활용할 수 잇는 문법
+  // 클래스간에 의사소통을 하는 경우에는 계약서(interface)에 의거해서 해야 한다.
 
   type CoffeeCup = {
     shots: number;
@@ -84,11 +85,12 @@
   const machines: CoffeeMaker[] = [
     new CaffeLatteMachine(16, '1'),
     new SweetCoffeeMaker(16),
-    new CaffeLatteMachine(16, '1'),
-    new SweetCoffeeMaker(16),
   ];
   machines.forEach((machine) => {
     console.log('-------------------------');
     machine.makeCoffee(1);
   });
 }
+// abstract 함수를 상속하면서 abstract 함수를 구현하지 않으면 오류가 발생한다.
+// 조금 더 안전하게 공통적인 기능을 수행할 수 있고, 상속받는 클래스마다 달라져야 하는것만
+// 직접 구현하게끔 강조할 수 있다.
