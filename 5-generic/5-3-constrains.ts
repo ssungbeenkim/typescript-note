@@ -56,10 +56,13 @@ const obj2 = {
   animal: '🐕',
 };
 
+function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+} /* key of 는 어떠한 오브젝트의 키 중 하나를 뜻함 */
+
 console.log(getValue(obj, 'name')); // ellie // 객체에 없는 키를 입력하면 에러가 발생한다.
 console.log(getValue(obj, 'age')); // 20
 console.log(getValue(obj2, 'animal')); // 🐕
 
-function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
-  return obj[key];
-}
+///* TypeScript constrain */
+//https://www.typescripttutorial.net/typescript-tutorial/typescript-generic-constraints/
