@@ -33,6 +33,7 @@
   // ellieAfterPay. -> interface에서 정의한 pay()밖에 사용할 수 없다. 세부 클래스의 정보를 잃어버리고  Employee가 된다.
 
   function pay<T extends Employee>(employee: T): T {
+    // T타입이면 되지만 Employee를 구현한 것만 가능하다.
     // implement 가 아니고 extend인 것은 문법임
     //<Eplyee를 확장한 것만 가능>
     employee.pay();
@@ -64,6 +65,7 @@
   console.log(getValue(obj, 'name')); // ellie // 객체에 없는 키를 입력하면 에러가 발생한다.
   console.log(getValue(obj, 'age')); // 20
   console.log(getValue(obj2, 'animal')); // 🐕
+  // 조건문을 사용하여 더 세밀하게 타입을 제한할 수 있다.
 }
 ///* TypeScript constrain */
 //https://www.typescripttutorial.net/typescript-tutorial/typescript-generic-constraints/
