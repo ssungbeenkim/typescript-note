@@ -7,9 +7,10 @@
   type SuccessState = {
     result: 'success';
   };
-
+  // 프로그래밍을 할 때 내가 예상할 수 있는 상태를 타입으로 정의하는 것이 더 깔끔하고 안정적이고 예상 가능한 프로그래밍을 할 수 있게 해 준다.
   type ResultState = SuccessState | NetworkErrorState;
   class NetworkClient {
+    // 네크워크 에러가 발행하는 것은 코드를 작성할 때 예상할 수 있는 State이다.
     tryConnect(): ResultState {
       return {
         result: 'success',
