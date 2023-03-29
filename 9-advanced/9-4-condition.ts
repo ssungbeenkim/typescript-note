@@ -1,3 +1,8 @@
+/* 
+타입에도 컨디션을 줄 수 있다. 
+
+ */
+// Ternary Operator
 type Check<T> = T extends string ? boolean : number;
 type Type = Check<string>; // boolean
 
