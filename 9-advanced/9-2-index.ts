@@ -1,4 +1,6 @@
 {
+  /*
+   * index를 이용하면 다른 타입의 키의 value타입을 사용할 수 있다. */
   const obj = {
     name: 'ellie',
   };
