@@ -10,3 +10,5 @@ Array;
 - 자바스크립트에서 만든 것은 아니고, vscode가 설치될 때 같이 설치되는 TypeScript와 함께 오는 것들이다. 
 - "d.ts" 는 type definition 또는 type dclaration 이라고 볼 수 있다. 
 */
+
+// Array에 있는 정의 읽어보기
