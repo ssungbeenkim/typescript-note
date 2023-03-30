@@ -18,12 +18,12 @@
 
   type Gender = Animal['gender']; //'male' | 'female'
 
-  type Keys = keyof Animal; // 'name' | 'age' | 'gender'
+  type Keys = keyof Animal; //* 'name' | 'age' | 'gender' 마치 유니온타입
   const key: Keys = 'gender';
 
   type Person = {
     name: string;
-    gender: Animal['gender'];
+    gender: Animal['gender']; //gender : male|female
   };
   const person: Person = {
     name: 'ellie',

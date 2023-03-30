@@ -1,10 +1,10 @@
 // Java: Exception
 // JavaScript: Error
 /* 
-보통 다른 언어에서는 Eception class가 있다. 
-Javascript 에서는 Error 클래스 
+보통 다른 언어에서는 Exception class가 있다. 
+Javascript 에서는 Error 클래스가 있음. 
 */
-// const array = new Array(100000000000000000);
+// const array = new Array(100000000000000000); // Error
 {
   // Error(Exception) Handling: try -> catch -> finally
   function readFile(fileName: string): string {
@@ -14,17 +14,14 @@ Javascript 에서는 Error 클래스
     return 'file contents🗒';
   }
 
-  function closeFile(fileName: string) {
-    //
-  }
+  function closeFile(fileName: string) {}
   function run() {
     const fileName = 'not exist!💩';
-
     try {
       console.log(readFile(fileName));
     } catch (error) {
       console.log(`catched!!`);
-      return; // 파일 안에서 리턴이 되거나 예상치 못한 에러가 발생할 경우에는
+      return;
     } finally {
       // finally는 무조건 실행된다.
       closeFile(fileName); // 반드시 마무리 해야 하는 것이 있다면 finally 안에서 처리해 주도록 한다.

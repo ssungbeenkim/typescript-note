@@ -15,7 +15,7 @@
   // [1, 2].map(item => item * item); // [1, 4]
   type Optional<T> = {
     [P in keyof T]?: T[P]; // for...in을 쓰는 것과 동일하게 동작한다.
-  };
+  }; // T의 key인 P 는 전부 Optional이고 T[P](valew)를 값으로 가진다.
 
   type VideoOptional = Optional<Video>;
 
@@ -25,7 +25,7 @@
   };
 
   const animal: Optional<Animal> = {
-    // 재사용성 good
+    // 재사용성 good. 다른 클래스에서도 사용이 가능하다.
     name: 'dog',
   };
 
@@ -35,7 +35,7 @@
   // };
 
   type ReadOnly<T> = {
-    readonly [P in keyof T]: T[P];
+    readonly [P in keyof T]: T[P]; // map Type.
   };
 
   animal.name = 'ellie';
@@ -45,13 +45,13 @@
     author: 'ellie',
   };
 
-  // video.author = XXXX
+  // video.author = XXXX readonly 라서 못바꿈
 
   /* 활용예제 */
   type Nullable<T> = { [P in keyof T]: T[P] | null };
   const obj2: Nullable<Video> = {
-    title: 'hi',
-    author: null,
+    title: 'hi', // title: string | null
+    author: null, // author: string | null
   };
 
   type Proxy<T> = {

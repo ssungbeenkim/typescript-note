@@ -9,7 +9,7 @@
   }
 
   class UserService {
-    constructor(private client: NetworkClient) {}
+    constructor(private client: NetworkClient) {} //dependency injection
     login() {
       this.client.tryConnect(); // 처음으로 사용하는 곳은 이곳이다. 여기서 핸들링?
     } // -> 에러가 발생했을 때 내가 정확하게 처리할 수 있는 것이 아니라면 캐치하지 않는 것이 낫다!

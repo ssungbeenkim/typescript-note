@@ -1,10 +1,10 @@
 /* 
 타입에도 컨디션을 줄 수 있다. 
-
  */
-// Ternary Operator
+
+// Ternary Operator처럼
 type Check<T> = T extends string ? boolean : number;
-type Type = Check<string>; // boolean
+type Type = Check<string>; // boolean // Type is boolean type
 
 type TypeName<T> = T extends string
   ? 'string'
@@ -18,7 +18,7 @@ type TypeName<T> = T extends string
   ? 'function'
   : 'object';
 
-type T0 = TypeName<string>;
+type T0 = TypeName<string>; // T0 = 'string'
 ('string');
 type T1 = TypeName<'a'>;
 ('string');
