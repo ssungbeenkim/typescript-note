@@ -21,8 +21,7 @@ counter.increase(); // Counter{...} , this는 Counter가 된다.
 const caller = counter.increase;
 //const caller = counter.increase.bind(counter);
 //-> Counter object에 bind를 해 주면 정보를 기억한다. 그래서 아래의 Bob에서 호출해도 Counter를 가리킨다.
-// 혹은 클래스 내에서 Arrow function을 사용하게 되면 선언될 당시 스코프의 this를 기억하고,
-// 다른 프로그래밍 언어처럼 행동하게 할 수 있다. -> 클래스 내부에 Arrow function 을 사용하자!
+// 혹은 생성자 함수 내에서 Arrow function을 사용하게 되면 동일한 효과를 볼 수 있다.
 
 /* 보충설명
 글로벌에서 선언한 함수는 글로벌 객체에 등록이 된다. 하지만 let,const로 선언한 변수는 그렇지 않다. 
