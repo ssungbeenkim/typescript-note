@@ -8,7 +8,7 @@ function simpleFunc() {
   console.log(this);
 }
 simpleFunc();
-window.simpleFunc(); // global에서 함수를 호출하는 것은 window에서 호출하는 것과 같다. globalthis
+window.simpleFunc(); // global에서 함수를 호출하는 것은 window에서 호출하는 것과 같다.
 
 class Counter {
   count = 0;

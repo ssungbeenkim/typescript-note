@@ -2,13 +2,13 @@
 Javascript에서 쓰이는 this는 다른 언어와 다르게 행동한다. 
 누가 부르냐에 따라 달라짐.. 호출한 문맥에 따라 달라진다. 
 */
-console.log(this); // globalthis
+console.log(this);
 
 function simpleFunc() {
   console.log(this);
 }
 simpleFunc();
-window.simpleFunc(); // global에서 함수를 호출하는 것은 window에서 호출하는 것과 같다. globalthis
+window.simpleFunc(); // global에서 함수를 호출하는 것은 window에서 호출하는 것과 같다.
 
 class Counter {
   count = 0;
