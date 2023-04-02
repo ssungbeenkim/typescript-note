@@ -39,7 +39,6 @@ function LatteMachine(milk) {
 }
 LatteMachine.prototype = Object.create(CoffeeMachine.prototype);
 // LatteMachine은 CoffeeMachine을 상속.
-// Proto에 직접 넣어줄 수 있다.
 
 const latteMachine = new LatteMachine(123);
 console.log(latteMachine);

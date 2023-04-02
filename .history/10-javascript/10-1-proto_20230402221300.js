@@ -32,14 +32,13 @@ const machine1 = new CoffeeMachine(10);
 const machine2 = new CoffeeMachine(20);
 console.log(machine1);
 console.log(machine2);
-machine1.makeCoffee(3); // 마치.. wrapper 함수나 built in object를 쓰는 것 같다.
+machine1.makeCoffee(3); // 마치..
 
 function LatteMachine(milk) {
   this.milk = milk;
 }
 LatteMachine.prototype = Object.create(CoffeeMachine.prototype);
 // LatteMachine은 CoffeeMachine을 상속.
-// Proto에 직접 넣어줄 수 있다.
 
 const latteMachine = new LatteMachine(123);
 console.log(latteMachine);
