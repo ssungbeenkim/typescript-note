@@ -3,8 +3,14 @@
 외부에서 클래스를 받아왔을 때 사용할 수 있는 함수가 너무 많아서 복잡할 수 있다. 
 Abstraction을 통해 정말 필요한 인터페이스만 노출하므로써 사용하기 쉽게 만들 수 있다. 
 interface를 활용하면 추상화를 더 극대화해서 사용이 가능하다. 
+*/
+  /* 
+추상화를 이용하면 사용자가 편리하게 사용하게 도울 수 있다. 
+추상화를 하는 방법은 언어마다 레벨이 다르고, 다양한 방식이 있다. 
+interface를 통해서도 추상화를 할 수 있지만 
+interface가 없는 언어에서는 접근 제어자를 통한 encapsulation을 통해 추상화를 할 수 있다. 
+*/
 
-  */
   type CoffeeCup = {
     shots: number;
     hasMilk: boolean;
@@ -76,11 +82,12 @@ interface를 활용하면 추상화를 더 극대화해서 사용이 가능하�
   makerCM.fillCoffeeBeans(1);
   // type이 CoffeeMachine 이 되면 클래스 안의 모든 public 메서드에 접근 가능.
   const makerI: CoffeeMaker = CoffeeMachine.makeMachine(100);
-  makerI.makeCoffee(1);
-  /* type이 interface CoffeeMaker이므로  interface에서 정의한 메서드만 사용 가능
-  maker2.fill... fillCoffeeBeans 사용이 불가능하다. 즉, interface를 사용하여 사용자의 행동 범위를 제한할 수 있다.
+  makerI.makeCoffee(1); // encapsulation을 통한 abstraction으로 인해 makeCoffee() 함수만 사용 가능.
+  //-> 사용자가 커피를 만드는 순서를 몰라도 손쉽게 커피를 만들 수 있다.
+  /* 
   Machine은 Maker 를 implement 하는 class 이고, Maker interface는 makeMachine() 메서드만 가지고 있다.
-  추상화, 즉 특정 방향으로 사용하도록 유도가 가능하다. */
+  추상화, 즉 특정 방향으로 사용하도록 유도가 가능하다. 
+  */
   const makerIC: CommercialCoffeeMaker = CoffeeMachine.makeMachine(15);
   makerIC.fillCoffeeBeans(15);
   makerIC.makeCoffee(1);
@@ -103,7 +110,7 @@ interface를 활용하면 추상화를 더 극대화해서 사용이 가능하�
       console.log(coffee);
       this.machine.fillCoffeeBeans(45);
       this.machine.clean();
-    } // 인터페이스에서 지정한 함수들을 모두 쓸 수 있다.
+    } // CommercialCoffeeMaker 인터페이스에서 지정한 함수들을 모두 쓸 수 있다.
   }
 
   const amature = new AmatureUser(makerI);

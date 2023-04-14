@@ -11,8 +11,8 @@
     private static BEANS_GRAMM_PER_SHOT: number = 7; // class level
     private coffeeBeans: number = 0; // instance (object) level
 
+    // *1 private 하므로써 makeMachine을 사용하도록 권장. 외부에서 생성자를 사용하지 못하도록 막는다.
     private constructor(coffeeBeans: number) {
-      // private 하므로써 makeMachine을 사용하도록 권장
       this.coffeeBeans = coffeeBeans;
     }
 
@@ -39,9 +39,8 @@
       };
     }
   }
-  // const maker = new CoffeeMaker(); Error
-  // Constructor of class 'CoffeeMaker' is private and only accessible within the class declaration.
-  // 아예 출력이 되지 않는다.
+
+  // *1 const maker = new CoffeeMaker(); Error Constructor of class 'CoffeeMaker' is private and only accessible within the class declaration.
   const maker1 = CoffeeMaker.makeMachine(7);
   console.log(maker1);
   //CoffeeMaker { coffeeBeans: 7 } private인데 왜 출력이 되는거지?
