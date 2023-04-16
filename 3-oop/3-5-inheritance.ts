@@ -1,9 +1,9 @@
 {
   /* 
-  상속에 대해 구현해보자. 
+  상속을 구현해보자. 
   카페라떼 머신을 만들것이다. 
-
    */
+
   type CoffeeCup = {
     shots: number;
     hasMilk: boolean;
@@ -73,7 +73,7 @@
       console.log('Steaming some milk... 🥛');
     }
     makeCoffee(shots: number): CoffeeCup {
-      const coffee = super.makeCoffee(shots); // 부모 클래스에서 함수 실행 후 return 값이 coffee에 저장된다.
+      const coffee = super.makeCoffee(shots); // 부모 클래스에서 makeCoffee함수 실행 후 return 값이 coffee에 저장된다.
       this.steamMilk();
       return {
         ...coffee,
@@ -84,7 +84,6 @@
 
   const machine = new CoffeeMachine(23);
   const latteMachine = new CaffeLatteMachine(23, 'SSSS');
-  const coffee = latteMachine.makeCoffee(1); // 상속한 클래스의 함수를 모두 사용 가능
+  const coffee = latteMachine.makeCoffee(1); // 상속한 클래스의 함수를 모두 사용할 수 있다.
   console.log(coffee);
-  // latteMachine.serialNumber =
 }

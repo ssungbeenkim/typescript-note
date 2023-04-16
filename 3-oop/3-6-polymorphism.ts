@@ -77,7 +77,7 @@
       this.steamMilk();
       return {
         ...coffee,
-        hasMilk: true,
+        hasMilk: true, // 부모 클래스의 함수를 재정의해서 다른 방식으로 구현할 수 있다.
       };
     }
   }
@@ -93,6 +93,7 @@
   }
 
   const machines: CoffeeMaker[] = [
+    // 다형성을 이용해서 다양한 클래스들을 한가지의 인터페이스로 다룰 수 있다.
     new CoffeeMachine(16),
     new CaffeLatteMachine(16, '1'),
     new SweetCoffeeMaker(16),
