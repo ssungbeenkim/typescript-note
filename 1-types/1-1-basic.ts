@@ -11,6 +11,7 @@
   const num: number = -6;
 
   // string
+  const age = 2;
   const str: string = 'hello';
 
   // boolean
