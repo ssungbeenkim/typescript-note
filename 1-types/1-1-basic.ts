@@ -59,7 +59,7 @@ null은 비어져 있음을 명확하게 명시하는 것.
     // console.log('hshshsh');
     // break;
   }
-  let neverEnding: never; // 💩 // 이렇게 쓰지는 않는다.
+  let neverEnding: never; // 💩 // 이렇게 쓰지 않는다.
 
   // objet
   let obj: object; // 💩 원시타입을 제외한 모든 오브젝트 타입을 담을 수 있다.
