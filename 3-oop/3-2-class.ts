@@ -5,7 +5,7 @@
   };
 
   class CoffeeMaker {
-    static BEANS_GRAMM_PER_SHOT: number = 7; // class level
+    static BEANS_GRAMM_PER_SHOT: number = 7; // class level. 만들어지는 object마다 생성되지 않는다.
     coffeeBeans: number = 0; // instance (object) level
 
     constructor(coffeeBeans: number) {
@@ -28,15 +28,15 @@
     }
   }
 
-  const maker = new CoffeeMaker(32);
-  console.log(maker);
+  const staticMaker = CoffeeMaker.makeMachine(32); // static은 class level이므로 class를 통해 접근해야 한다.
+
+  const maker1 = new CoffeeMaker(32);
+  console.log(maker1);
   const maker2 = new CoffeeMaker(14);
   console.log(maker2);
 
-  const maker3 = CoffeeMaker.makeMachine(3);
-  console.log(maker3);
-  const coffee = maker3.makeCoffee(1);
+  console.log(maker1);
+  const coffee = maker1.makeCoffee(1);
   console.log(coffee);
-  console.log(maker3);
 }
-// javascript에서 Math. 으로 쓰는 함수들은 모두 클래스 레벨 메서드이다.
+// javascript에서 Math.abs .. 등 으로 쓰는 함수들은 모두 클래스 레벨 메서드이다.
