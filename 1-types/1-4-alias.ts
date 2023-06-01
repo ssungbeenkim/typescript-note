@@ -8,6 +8,7 @@
   const name: Text = 'ellie';
   const address: Text = 'korea';
   type Num = number;
+  const num: Num = 123;
   type Student = {
     // Object type
     name: string;
@@ -29,4 +30,5 @@
   const json: JSON = 'json'; // 'json' 만 할당할 수 있음
 
   type Boal = true;
+  const isCat: Boal = true; // true 만 할당할 수 있음
 }

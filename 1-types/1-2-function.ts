@@ -50,7 +50,8 @@
   }
   printMessage(); // 아무것도 전달하지 않으면 기본값이 전달됨
 
-  // Rest parameter
+  // Rest parameter 
+  // https://www.typescriptlang.org/docs/handbook/2/functions.html#rest-parameters
   function addNumbers(...numbers: number[]): number {
     return numbers.reduce((a, b) => a + b);
   }

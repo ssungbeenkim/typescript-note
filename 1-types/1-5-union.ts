@@ -25,9 +25,10 @@
   function login(): LoginState {
     //function login(id: string, password: string): Promise<LoginState> { 실제로는 이런식으로 쓸것.
     return {
+      // 성공했다고 치고
       response: {
         body: 'logged in!',
-      }, // 예제가 조금 이해가 안가는데, 성공했다고 친것.
+      },
     };
   }
 
