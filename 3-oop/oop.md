@@ -3,6 +3,7 @@
 ## Encapsulation
 
 - 고양이의 기분을 직접 변경할 수 없지만 놀아주므로써 기분이 좋게 할 수 있다.
+- 정보은닉
 
 ## Abstraction
 
@@ -10,8 +11,9 @@
 
 ## Inheritance
 
-- 상속
+- 상속을 통해 기능을 이용할 수 있다.
+- ex\)브라우저 돔 모델은 Event Target을 상속한다.
 
 ## Polymorphism
 
--
+- 다양한 형태로 만들 수 있다.
