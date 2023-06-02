@@ -82,7 +82,8 @@
   makerCM.fillCoffeeBeans(1);
   // type이 CoffeeMachine 이 되면 클래스 안의 모든 public 메서드에 접근 가능.
   const makerI: CoffeeMaker = CoffeeMachine.makeMachine(100);
-  makerI.makeCoffee(1); // encapsulation을 통한 abstraction으로 인해 makeCoffee() 함수만 사용 가능.
+  makerI.makeCoffee(1);
+  // encapsulation을 통한 abstraction으로 인해 makeCoffee() 함수만 사용 가능.
   //-> 사용자가 커피를 만드는 순서를 몰라도 손쉽게 커피를 만들 수 있다.
   /* 
   Machine은 Maker 를 implement 하는 class 이고, Maker interface는 makeMachine() 메서드만 가지고 있다.
