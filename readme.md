@@ -1,6 +1,6 @@
-# TypeScript 프로젝트 설정하기
+# OOP on TypeScript
 
-## 기본 세팅
+## TypeScript 기본 세팅
 
 ### vscode
 
@@ -27,6 +27,6 @@
 ### TSConfig 셋업하기
 
 - tsc --init 으로 config파일 생성
-- ## 프로젝트 구조 정리하기
+- 프로젝트 구조 정리하기
 
-# 작성중
+### 작성중...

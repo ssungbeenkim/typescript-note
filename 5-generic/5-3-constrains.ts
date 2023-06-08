@@ -23,14 +23,20 @@
     return employee;
   }
 
-  // const ellie = new FullTimeEmployee();
-  // const bob = new PartTimeEmployee();
-  // ellie.workFullTime();
-  // bob.workPartTime();
+  /* 
+  const ellie = new FullTimeEmployee();
+  const bob = new PartTimeEmployee();
+  ellie.workFullTime();
+  bob.workPartTime();
 
-  // const ellieAfterPay = payBad(ellie);
-  // const bobAfterPay = payBad(bob);
-  // ellieAfterPay. -> interface에서 정의한 pay()밖에 사용할 수 없다. 세부 클래스의 정보를 잃어버리고  Employee가 된다.
+  const ellieAfterPay = payBad(ellie);
+  const bobAfterPay = payBad(bob);
+  
+  ellieAfterPay. 
+
+  -> interface에서 정의한 pay()밖에 사용할 수 없다. 
+  세부 클래스의 정보를 잃어버리고  Employee가 된다. 
+  */
 
   function pay<T extends Employee>(employee: T): T {
     // T타입이면 되지만 Employee를 구현한 것만 가능하다.
