@@ -3,7 +3,7 @@ type PageInfo = {
 };
 type Page = 'home' | 'about' | 'contact';
 
-//*
+// ref to 자료구조 Map
 const nav: Record<Page, PageInfo> = {
   // 하나를 key로 쓰고 다른 하나를 다른 타입으로 묶고 싶을 때 쓸 수 있다.
   home: { title: 'Home' },
