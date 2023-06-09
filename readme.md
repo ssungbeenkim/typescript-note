@@ -1,5 +1,7 @@
 # OOP on TypeScript
 
+TypeScript로 공부하는 객체 지향 프로그래밍
+
 ## TypeScript 기본 세팅
 
 ### vscode

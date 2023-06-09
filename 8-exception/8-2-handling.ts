@@ -1,4 +1,7 @@
 {
+  /*
+  어디에서 에러 핸들링을 하는 것이 좋을까. 
+  */
   class TimeoutError extends Error {}
   class OfflineError extends Error {}
 
@@ -21,9 +24,10 @@
       try {
         this.userService.login();
       } catch (error) {
+        console.log('catched!');
         // 캐치로 받는 순간 error는 any Type이 된다.
         // show dialog to use
-        // 처리할 수 있는 곳에서 캐치해 주는 것이 좋다. 조금 더 의미있는 에러 처리를 할 수 있다.
+        // 이렇게 Application level에서, 처리할 수 있는 곳에서 캐치해 주는 것이 좋다. 조금 더 의미있는 에러 처리를 할 수 있다.
       }
     }
   }
