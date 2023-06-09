@@ -1,5 +1,8 @@
 {
-  // type And Interface
+  // Difference of type And Interface
+
+  /* 예전에 TS가 처음 나왔을 때는 타입보다 interface가 할 수 있는게 더 많았다. 
+  그래서 예전에 배운 사람들 중에 interface를 남발하는 경우가 있는데 좋지 않다. */
 
   type PositionType = {
     x: number;
@@ -53,8 +56,9 @@
     name: string;
     age: number;
   };
-  type Name = Person['name']; // string
+  type Name = Person['name'];
+  // Person의 name이라는 타입을 추출해서 Name이라는 타입을 정의할 수 있다. -> string
 
   type NumberType = number;
-  type Direction = 'left' | 'right'; // interface cannot do this
+  type Direction = 'left' | 'right'; // interface cannot do this. (union type)
 }
