@@ -17,4 +17,12 @@
   };
   const updated = updateTodo(todo, { priority: 'low' });
   console.log(updated);
+  /* 
+  {
+  title: 'learn TypeScript',
+  description: 'study hard',
+  label: 'study',
+  priority: 'low'
+}
+  */
 }
