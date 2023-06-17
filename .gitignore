@@ -1,3 +1,5 @@
 main.ts
 package.json
 motion/
+.history/
+.vscode/
