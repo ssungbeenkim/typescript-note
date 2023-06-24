@@ -22,6 +22,11 @@ TypeScript로 공부하는 객체 지향 프로그래밍
 
 - tsc -w : watch모드로 파일 업데이시 바로 재컴파일 되도록 한다.
 
+### TypeScript-Node-Starter
+
+- miscrosoft에서 만든 CRA같은 템플릿. 무거우므로 직접 셋업하는게 나을 것 같다.
+  <br/>
+
 ---
 
 ## 프로젝트 세팅하기
@@ -52,3 +57,14 @@ TypeScript로 공부하는 객체 지향 프로그래밍
 - compiler option에서 "sourceMap": true 로 설정하면 컴파일시 map file 생성.
 - 브라우저 devtool \- Source탭에서 ts 파일로 디버깅 툴 사용이 가능.
 - vscode에서 디버깅 할 시 extension \- Debugger for Chrome 활용할 수 있지만 Browser Devtool에서 확인하는 것이 편하다.
+
+### 자동 재실행 ( TS + Node )
+
+- npm i --save-dev [concurrently](https://www.npmjs.com/package/concurrently) nodemon : dev dependency에 추가
+- package.json 에서 start 명령어 설정으로 tsc -w 와 nodemon 동시 실행 가능
+
+```json
+  "scripts": {
+    "start": "concurrently \"tsc -w\" \"nodemon dist/main\"",
+  },
+```
