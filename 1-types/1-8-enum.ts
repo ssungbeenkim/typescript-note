@@ -24,8 +24,8 @@
     Saturday,
     Sunday,
   }
-  console.log(Days.Tuesday);
-  let day: Days = Days.Saturday;
+  console.log(Days.Tuesday); // 1
+  let day: Days = Days.Saturday; //
   // day = Days.Tuesday;
   // day = 10; // TypeScript 에서는 enum을 잘 쓰지 않는 것이 좋다.
   // 다른 어떤 숫자도 할당할 수 있고 에러가 발생하지 않고 타입 보장 불가능

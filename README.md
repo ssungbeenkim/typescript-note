@@ -2,13 +2,13 @@
 
 TypeScript로 공부하는 객체 지향 프로그래밍
 
-## TypeScript 기본 세팅
+## TypeScript 개발환경
 
 ### vscode
 
 - setting - strict null 검색 - Extention - TypeScript - Strict Null Check 체크하기.
 
-### typescript 설치하기
+### typescript 설치
 
 - npm install -g typescript
 - 기본 명령어 tsc
@@ -29,9 +29,9 @@ TypeScript로 공부하는 객체 지향 프로그래밍
 
 ---
 
-## 프로젝트 세팅하기
+## 프로젝트 세팅
 
-### TSConfig 셋업하기
+### TSConfig 셋업
 
 - [컴파일 설정 ref](https://inpa.tistory.com/entry/TS-%F0%9F%93%98-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-tsconfigjson-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0-%EC%B4%9D%EC%A0%95%EB%A6%AC)
 - tsc --init : tsconfig파일 생성
@@ -58,7 +58,7 @@ TypeScript로 공부하는 객체 지향 프로그래밍
 - 브라우저 devtool \- Source탭에서 ts 파일로 디버깅 툴 사용이 가능.
 - vscode에서 디버깅 할 시 extension \- Debugger for Chrome 활용할 수 있지만 Browser Devtool에서 확인하는 것이 편하다.
 
-### 자동 재실행 ( TS + Node )
+### 자동 재실행 설정 ( TS + Node )
 
 - npm i --save-dev [concurrently](https://www.npmjs.com/package/concurrently) nodemon : dev dependency에 추가
 - package.json 에서 start 명령어 설정으로 tsc -w 와 nodemon 동시 실행 가능

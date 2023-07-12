@@ -1,6 +1,6 @@
 {
   /**
-   *  Union Types: OR // 많이 쓰임. 활용도가 높다.
+   *  Union Types: OR
    */
   type Direction = 'left' | 'right' | 'up' | 'down';
   function move(direction: Direction) {
