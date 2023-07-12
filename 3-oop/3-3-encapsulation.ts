@@ -44,7 +44,7 @@
   }
 
   // *1 const maker = new CoffeeMaker(); Error Constructor of class 'CoffeeMaker' is private and only accessible within the class declaration.
-  // const makeralskdj = new CoffeeMaker(30) // Contructor is private
+  // const makeralskdj = new CoffeeMaker(30) // !! Contructor is private
   const maker1 = CoffeeMaker.makeMachine(7);
   const coffee = maker1.makeCoffee(1);
   maker1.fillCoffeeBeans(3);
@@ -71,6 +71,8 @@
     // firstName 을 외부에서 변경하려고 하면 read-only property 라고 에러가 발행하며 변경 불가.
   }
   const user = new User('Steve', 'Jobs');
-  user.age = 6;
-  console.log(user.fullName);
+  user.age = 6; // setter를 통해 안전하게 업데이트 가능
+  // console.log(user.firstName); // firstName은 private이므로 접근 불가
+  console.log(user.lastName); // lastName은 public이므로 접근 가능
+  console.log(user.fullName); // getter를 통해 접근 가능
 }
