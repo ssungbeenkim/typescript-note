@@ -1,6 +1,6 @@
 # OOP on TypeScript
 
-TypeScript로 공부하는 객체 지향 프로그래밍
+TypeScript의 기본 개념을 정리하고 객체지향 패러다임적 방법론을 연습합니다.
 
 ## TypeScript 개발환경
 

@@ -5,7 +5,7 @@
   };
 
   class CoffeeMaker {
-    static BEANS_GRAMM_PER_SHOT: number = 7; // class level. 만들어지는 object마다 생성되지 않는다.
+    static BEANS_GRAMM_PER_SHOT: number = 7; // class level.
     coffeeBeans: number = 0; // instance (object) level
 
     constructor(coffeeBeans: number) {
@@ -28,13 +28,9 @@
     }
   }
 
-  const staticMaker = CoffeeMaker.makeMachine(32); // static은 class level이므로 class를 통해 접근해야 한다.
+  const staticMaker = CoffeeMaker.makeMachine(32); // static은 class level이므로 class를 통해 접근
 
   const maker1 = new CoffeeMaker(32);
-  console.log(maker1);
-  const maker2 = new CoffeeMaker(14);
-  console.log(maker2);
-
   console.log(maker1);
   const coffee = maker1.makeCoffee(1);
   console.log(coffee);

@@ -15,7 +15,7 @@
     shots: number;
     hasMilk: boolean;
   };
-  // interface는 계약서같은 것이다. 사용하면 추상화를 극대화 할 수 있다.
+  // interface는 계약서같은 것이다. 추상화를 극대화 할 수 있다.
   interface CoffeeMaker {
     // Interface 이름 앞에 I를 붙이는 경우도 있음. but 외부에서 사용하는 이름이므로 간결한게 좋을 것 같다.
     makeCoffee(shots: number): CoffeeCup;
@@ -71,6 +71,7 @@
       };
     }
 
+    // typescript에서는 접근제어자가 없으면 default로 public이 된다.
     makeCoffee(shots: number): CoffeeCup {
       this.grindBeans(shots);
       this.preheat();
@@ -80,9 +81,11 @@
 
   const makerCM: CoffeeMachine = CoffeeMachine.makeMachine(32);
   makerCM.fillCoffeeBeans(1);
+  makerCM.makeCoffee(2);
   // type이 CoffeeMachine 이 되면 클래스 안의 모든 public 메서드에 접근 가능.
   const makerI: CoffeeMaker = CoffeeMachine.makeMachine(100);
   makerI.makeCoffee(1);
+  // makerI.fillCoffeeBeans(2); // 사용 불가. interface에 정의된 함수만 사용 가능.
   // encapsulation을 통한 abstraction으로 인해 makeCoffee() 함수만 사용 가능.
   //-> 사용자가 커피를 만드는 순서를 몰라도 손쉽게 커피를 만들 수 있다.
   /* 
