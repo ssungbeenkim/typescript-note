@@ -13,7 +13,7 @@
   }
 
   abstract class CoffeeMachine implements CoffeeMaker {
-    // abstract class는 instance를 만들 수 없다.
+    // abstract class는 instance를 만들 수 없다. 상속하여 사용이 가능.
     private static BEANS_GRAMM_PER_SHOT: number = 7; // class level
     private coffeeBeans: number = 0; // instance (object) level
 

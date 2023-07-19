@@ -39,7 +39,7 @@
   }
   class ColdMilkSteamer implements MilkFrother {
     makeMilk(cup: CoffeeCup): CoffeeCup {
-      console.log(`Coling... Steaming some milk🥛...`);
+      console.log(`Making cold steam... ... Steaming some milk🥛...`);
       return {
         ...cup,
         hasMilk: true,

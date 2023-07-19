@@ -9,6 +9,7 @@
   // public 외부에서 볼 수 있고 상속이나 인스턴스를 통해 내, 외부에서 볼 수 있음
   // private 외부에서 볼 수도 접근할 수도 없다. 자식 클래스 내부에서조 볼 수 없음.
   // protected 외부에서는 볼 수 없지만 상속을 할 때, 자식 클래스 내부에서는 볼 수 있게 함
+  // 물론 전부 클래스 내부에서는 접근이 가능
   // https://velog.io/@wjd489898/Typescript-%ED%81%B4%EB%9E%98%EC%8A%A4Class-private-protected-public
   class CoffeeMaker {
     private static BEANS_GRAMM_PER_SHOT: number = 7; // class level
@@ -43,10 +44,9 @@
     }
   }
 
-  // *1 const maker = new CoffeeMaker(); Error Constructor of class 'CoffeeMaker' is private and only accessible within the class declaration.
-  // const makeralskdj = new CoffeeMaker(30) // !! Contructor is private
+  // *1 const maker = new CoffeeMaker(); Error Constructor of class 'CoffeeMaker' is private
   const maker1 = CoffeeMaker.makeMachine(7);
-  const coffee = maker1.makeCoffee(1);
+  const coffee = maker1.makeCoffee(1); // 내부의 함수를 통해서만 클래스 생성이 가능하다.
   maker1.fillCoffeeBeans(3);
   console.log(coffee);
 
