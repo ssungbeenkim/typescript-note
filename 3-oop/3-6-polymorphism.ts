@@ -8,7 +8,7 @@
   type CoffeeCup = {
     shots: number;
     hasMilk?: boolean;
-    hasSugar?: boolean; //
+    hasSugar?: boolean;
   };
 
   interface CoffeeMaker {

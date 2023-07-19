@@ -83,6 +83,7 @@
   makerCM.fillCoffeeBeans(1);
   makerCM.makeCoffee(2);
   // type이 CoffeeMachine 이 되면 클래스 안의 모든 public 메서드에 접근 가능.
+
   const makerI: CoffeeMaker = CoffeeMachine.makeMachine(100);
   makerI.makeCoffee(1);
   // makerI.fillCoffeeBeans(2); // 사용 불가. interface에 정의된 함수만 사용 가능.

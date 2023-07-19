@@ -73,7 +73,7 @@
       console.log('Steaming some milk... 🥛');
     }
     makeCoffee(shots: number): CoffeeCup {
-      const coffee = super.makeCoffee(shots); // 부모 클래스에서 makeCoffee함수 실행 후 return 값이 coffee에 저장된다.
+      const coffee = super.makeCoffee(shots); // *부모 클래스에서 makeCoffee함수 실행 후 return 값이 coffee에 저장된다.
       this.steamMilk();
       return {
         ...coffee,

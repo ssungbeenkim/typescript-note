@@ -41,7 +41,7 @@
   function pay<T extends Employee>(employee: T): T {
     // T타입이면 되지만 Employee를 구현한 것만 가능하다.
     // implement 가 아니고 extend인 것은 문법임
-    //<Eplyee를 확장한 것만 가능>
+    //<Eployee를 확장한 것만 가능>
     employee.pay();
     return employee;
   }
