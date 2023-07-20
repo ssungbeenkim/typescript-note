@@ -29,6 +29,7 @@
   class App {
     constructor(private userService: UserService) {}
     run() {
+      // Application level에서 catch해준다.
       try {
         this.userService.login();
       } catch (error) {
