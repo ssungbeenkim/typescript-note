@@ -46,7 +46,7 @@
   // 😆 only interfaces can be merged.
   interface PositionInterface {
     z: number;
-  } // interface에서 같은 이름으로 인터페이스를 다시 정의하면 사용하는 곳에서는 두가지를 병합한 타입이 된다.  (*1)
+  } // *1 interface에서 같은 이름으로 인터페이스를 다시 정의하면 사용하는 곳에서는 두가지를 병합한 타입이 된다.
 
   // type PositionType { // Type cannot be merged.
   // }
