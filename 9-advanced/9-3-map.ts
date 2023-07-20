@@ -19,7 +19,7 @@
   type Optional<T> = {
     // 재사용성이 높다.
     [P in keyof T]?: T[P]; // for...in을 쓰는 것과 동일하게 동작한다.
-  }; // T의 key인 P 는 전부 Optional이고 T[P](valew)를 값으로 가진다.
+  }; // T의 key인 P 는 전부 Optional이고 T[P](value)를 값으로 가진다.
 
   type VideoOptional = Optional<Video>;
 
@@ -59,6 +59,7 @@
   };
 
   type Proxy<T> = {
+    //*
     get(): T;
     set(value: T): void;
   };
