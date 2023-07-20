@@ -4,7 +4,6 @@
   인덱스 기반의 타입을 사용할 수 있다. 
   
    * index를 이용하면 다른 타입의 키의 value타입을 사용할 수 있다. 
-  정의
   interface : 클래스 등에서 구현하고 따라가야 할 규격사항을 정의할 때 사용한다. 
   type : 데이터의 모습, 타입을 정의한다. 
   */
@@ -26,7 +25,8 @@
 
   type Gender = Animal['gender']; //'male' | 'female'
 
-  type Keys = keyof Animal; //* 'name' | 'age' | 'gender' 마치 유니온타입처럼 보든 value의 타입들이 할당된다.
+  type Keys = keyof Animal; //* 'name' | 'age' | 'gender' 마치 유니온타입처럼
+  //모든 value의 타입들이 할당된다.
   const key: Keys = 'gender';
 
   type Person = {
