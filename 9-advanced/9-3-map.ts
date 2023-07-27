@@ -1,6 +1,7 @@
 {
   /*
     map Type은 기존의 타입들을 이용하면서 다른 타입으로 성질을 바꿔 이용할 수 있게 해 준다.
+    https://www.typescriptlang.org/docs/handbook/2/mapped-types.html 
    */
   type Video = {
     title: string;
@@ -58,8 +59,8 @@
     author: null, // author: string | null
   };
 
+  //*
   type Proxy<T> = {
-    //*
     get(): T;
     set(value: T): void;
   };

@@ -9,7 +9,7 @@ function simpleFunc() {
   console.log(this); // // global object(브라우저에서는 window객체)
 }
 simpleFunc();
-window.simpleFunc(); // global에서 함수를 호출하는 것은 window에서 호출하는 것과 같다. globalthis
+window.simpleFunc(); // global에서 함수를 호출하는 것은 window에서 호출하는 것과 같다. (브라우저에서 확인가능)
 
 class Counter {
   count = 0;
@@ -28,7 +28,7 @@ counter.printThis(); // Counter{...} , this는 Counter가 된다.
 다른 프로그래밍 언어처럼 행동하게 할 수 있다.
 */
 
-const caller = counter.printThis;
+const caller = counter.printThis; // undefined. this 정보를 잃어버림.
 /*
 caller는 counter.printThis 함수를 참조하는 변수이다.  
 글로벌에서 선언한 함수는 글로벌 객체에 등록이 된다. 하지만 let,const로 선언한 변수는 그렇지 않다. 
