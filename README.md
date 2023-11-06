@@ -1,30 +1,28 @@
-# OOP on TypeScript
+# TypeScript Note
 
-TypeScript의 기본 개념을 정리하고 객체지향 패러다임적 방법론을 연습합니다.
-
-## TypeScript 개발환경
+## 환경설정
 
 ### vscode
 
-- setting - strict null 검색 - Extention - TypeScript - Strict Null Check 체크하기.
+- setting - strict null 검색 - Extention - TypeScript - Strict Null Check 
 
 ### typescript 설치
 
-- npm install -g typescript
-- 기본 명령어 tsc
+- $ npm install -g typescript
+- $ tsc
 
 ### ts-node 설치
 
-- 터미널에서 TS 파일 바로 실행 가능
+- 터미널에서 바로 TS 파일 실행
 - npm install -g ts-node
 
 ### 브라우저 환경
 
-- tsc -w : watch모드로 파일 업데이시 바로 재컴파일 되도록 한다.
+- tsc -w : watch모드로 파일 업데이시 바로 재컴파일 되도록 함
 
 ### TypeScript-Node-Starter
 
-- miscrosoft에서 만든 CRA같은 템플릿. 무거우므로 직접 셋업하는게 나을 것 같다.
+- miscrosoft에서 만든 CRA같은 템플릿. 무거우므로 직접 셋업하는게 나음
   <br/>
 
 ---
